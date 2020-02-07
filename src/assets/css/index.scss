@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $bg-gray;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  //min-height:50em;
+  font-size: 1.5em;
+  color: $black;
+  background: $primary; //$white;
+  //box-shadow:inset $grey 0 0 5em 2em;
+  line-height: 1.4em;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  line-height: normal;
+  cursor: pointer;
+  outline: none;
+
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loading {
+  position: fixed;
+  top: 40px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background-color: $green-yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba($almost-black, 0.8);
+  transform: translateY(-150px);
+  transition: 0.5s;
+
+  i {
+    font-size: 80%;
+  }
+
+  &.show {
+    transform: translateY(0);
+  }
+}
+
+.main-buts {
+  margin-bottom: 20px;
+  border: 4px solid #6a8d84;
+  border-radius: 7px;
+  background-color: #76a599;
+  padding: 5px 0;
+
+  button {
+    margin: 0 10px;
+    padding: 0.5em 0.8em;
+    background-color: $green-yellow;
+    border-radius: 7px;
+    box-shadow: 0px 5px 0px #858623;
+    transition: 0.5s;
+    transform: translateY(-5px);
+    color: rgba($almost-black, 0.8);
+    &:hover {
+      background-color: #d2d438;
+      box-shadow: 0px 0px 0px #858623;
+      transform: translateY(0);
+    }
+
+    &:disabled,
+    &[disabled] {
+      background-color: #d2d438;
+      box-shadow: 0px 3px 0px #858623;
+      transform: translateY(-2px);
+      cursor: default;
+      color: rgba($almost-black, 0.5);
+    }
+  }
+}
+
+.rotating {
+  animation: rotating 2s linear infinite;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

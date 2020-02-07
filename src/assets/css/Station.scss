@@ -1,0 +1,113 @@
+.station {
+  background-color: $stations-blocks;
+  box-shadow: 0 0 5px $black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 10px 3px;
+  padding: 7px 5px;
+  border-radius: 5px;
+
+  .station-info {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .logo {
+      height: 60px;
+      width: 60px;
+      object-fit: contain;
+    }
+
+    .title {
+      margin-left: 5px;
+      font-size: 80%;
+      color: $almost-black;
+    }
+  }
+
+  .isplaying-wrapper {
+    background-image: linear-gradient(to right, rgba($orange, 0), rgba($orange, 1));
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+
+    .isplaying {
+      display: inline-block;
+      width: 80px;
+      height: 40px;
+
+      div {
+        display: inline-block;
+        position: absolute;
+        margin-top: 3px;
+        right: 8px;
+        width: 10px;
+        background: $stations-blocks;
+        animation: isplaying 0.9s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+        border-radius: 3px;
+        &:nth-child(1) {
+          right: 8px;
+          animation-delay: 0.24s;
+        }
+        &:nth-child(2) {
+          right: 22px;
+          animation-delay: 0.12s;
+        }
+        &:nth-child(3) {
+          right: 36px;
+          animation-delay: 0;
+        }
+      }
+
+      @keyframes isplaying {
+        0% {
+          top: 14px;
+          height: 44px;
+        }
+        50%,
+        100% {
+          top: 24px;
+          height: 22px;
+        }
+      }
+    }
+  }
+
+  .play-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.3s;
+    text-align: center;
+    background-color: #f36363;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .loading-station{
+    background-color: #f36363;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,89 @@
+.music-bars {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  height: 250px;
+  align-items: flex-end;
+
+  div {
+    background-color: red;
+    width: 30px;
+    height: 60px;
+    animation-iteration-count: infinite;
+    margin: 0 2px;
+  }
+
+  div.bar1 {
+    background-color: red;
+    animation: ex1 1.2s linear infinite;
+
+  }
+  div.bar2 {
+    background-color: orange;
+    animation: ex2 1.7s linear infinite;
+
+  }
+  div.bar3 {
+    background-color: yellow;
+    animation: ex3 1.9s linear infinite;
+
+  }
+  div.bar4 {
+    background-color: limegreen;
+    animation: ex4 1s linear infinite;
+  }
+  div.bar5 {
+    background-color: skyblue;
+    animation: ex5 1.3s linear infinite;
+  }
+  div.bar6 {
+    background-color: blue;
+    animation: ex6 1.6s linear infinite;
+  }
+  div.bar7 {
+    background-color: purple;
+    animation: ex7 1.4s linear infinite;
+  }
+  @keyframes ex1 {
+    50% {
+      background-color: purple;
+      height: 160px;
+    }
+  }
+  @keyframes ex2 {
+    50% {
+      background-color: blue;
+      height: 210px;
+    }
+  }
+  @keyframes ex3 {
+    50% {
+      background-color: skyblue;
+      height: 250px;
+    }
+  }
+  @keyframes ex4 {
+    50% {
+      background-color: green;
+      height: 160px;
+    }
+  }
+  @keyframes ex5 {
+    50% {
+      background-color: yellow;
+      height: 210px;
+    }
+  }
+  @keyframes ex6 {
+    50% {
+      background-color: orange;
+      height: 110px;
+    }
+  }
+  @keyframes ex7 {
+    50% {
+      background-color: red;
+      height: 210px;
+    }
+  }
+}

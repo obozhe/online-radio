@@ -1,0 +1,124 @@
+.stations-wrapper {
+  position: fixed;
+  display: flex;
+  right: 0;
+  height: 100vh;
+  transition: 0.5s;
+  transform: translateX(250px);
+
+  .stations {
+    background-color: $orange;
+    width: 250px;
+    padding: 5px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    box-shadow: inset 0 0 5px $black;
+
+    .stations-items-wrapper {
+      border-radius: 5px;
+      padding-bottom: -20px;
+      overflow: hidden;
+      box-shadow: inset 0 0 5px $black;
+
+      .stations-items {
+        height: 100%;
+        overflow: scroll;
+        overscroll-behavior: none;
+        scrollbar-width: none;
+        -webkit-overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        overflow: -moz-scrollbars-none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+      }
+    }
+
+    .search {
+      height: 35px;
+      width: 100%;
+      display: flex;
+      background-color: $stations-blocks;
+      border-radius: 5px;
+      color: $orange;
+
+      .icon-search-1 {
+        font-size: 70%;
+        transform: rotate(90deg);
+      }
+
+      input {
+        color: $almost-black;
+        outline: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        font-size: 60%;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .toogler {
+    padding: 10px 5px;
+    border-radius: 10px 0 0 10px;
+    height: fit-content;
+    width: 40px;
+    margin-top: 50px;
+    color: $black;
+    background-color: $orange;
+    font-size: 70%;
+    color: #86e9e4;
+    letter-spacing: 5px;
+    z-index: 10;
+
+    span {
+      transform: rotate(180deg);
+      writing-mode: tb-rl;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 5px;
+
+      b {
+        line-height: 100%;
+        text-align: center;
+      }
+
+      i {
+        font-size: 100%;
+        width: 30px;
+        height: 30px;
+        transform: translateY(-5px);
+
+        &::before {
+          margin: 0;
+          width: 30px;
+          height: 30px;
+          transform: rotate(180deg);
+          transition: 0.5s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+
+        &.rotate {
+          transform: translateY(0px);
+
+          &::before {
+            transform: rotate(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+.show {
+  transform: translateX(0);
+}
