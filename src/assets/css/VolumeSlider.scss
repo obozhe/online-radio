@@ -1,0 +1,23 @@
+.volume-slider-wrapper{
+  width: 20em;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i{
+    color: $green-yellow;
+  }
+  .input-range{
+    margin: 0 7px
+  }
+  .input-range__label-container{
+    display: none;
+  }
+  .input-range__track--active{
+    background: $green-yellow;
+  }
+  .input-range__slider{
+    background: $green-yellow;
+    border: $green-yellow;
+  }
+}

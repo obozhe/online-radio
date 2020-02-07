@@ -1,7 +1,9 @@
 
 .icon-to-end:before { content: '\e800'; } /* '' */
+.icon-volume-off:before { content: '\e801'; } /* '' */
 .icon-search-1:before { content: '\e802'; } /* '' */
 .icon-play:before { content: '\e803'; } /* '' */
 .icon-pause:before { content: '\e804'; } /* '' */
 .icon-left-big:before { content: '\e805'; } /* '' */
+.icon-volume-up:before { content: '\e806'; } /* '' */
 .icon-spin5:before { content: '\e838'; } /* '' */

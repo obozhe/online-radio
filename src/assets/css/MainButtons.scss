@@ -1,0 +1,32 @@
+.main-buts {
+  margin-bottom: 20px;
+  border: 4px solid #6a8d84;
+  border-radius: 7px;
+  background-color: #76a599;
+  padding: 5px 0;
+
+  button {
+    margin: 0 10px;
+    padding: 0.5em 0.8em;
+    background-color: $green-yellow;
+    border-radius: 7px;
+    box-shadow: 0px 5px 0px #858623;
+    transition: 0.5s;
+    transform: translateY(-5px);
+    color: rgba($almost-black, 0.8);
+    &:hover {
+      background-color: #d2d438;
+      box-shadow: 0px 0px 0px #858623;
+      transform: translateY(0);
+    }
+
+    &:disabled,
+    &[disabled] {
+      background-color: #d2d438;
+      box-shadow: 0px 3px 0px #858623;
+      transform: translateY(-2px);
+      cursor: default;
+      color: rgba($almost-black, 0.5);
+    }
+  }
+}

@@ -19,20 +19,31 @@ export default class StationManager {
     });
 
     this.stations = stations;
-
-    // Howler.volume(0.5);
+    this.isPlaying = null;
+    this.volume = 0.5;
   }
 
   play(stationName) {
     this.stop();
-    this.stations.get(stationName).load();
-    this.stations.get(stationName).play();
+    this.isPlaying = this.stations.get(stationName);
+    this.isPlaying.load();
+    this.isPlaying.volume(this.volume);
+    this.isPlaying.play();
   }
 
   stop() {
-    this.stations.forEach((station) => {
-      station.stop();
-      station.unload();
-    });
+    if (this.isPlaying) {
+      this.isPlaying.stop();
+      this.isPlaying.unload();
+    }
+  }
+
+  set volumeValue(volume) {
+    this.volume = volume;
+    if (this.isPlaying) this.isPlaying.volume(volume);
+  }
+
+  get volumeValue() {
+    return this.volume;
   }
 }

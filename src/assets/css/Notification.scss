@@ -1,0 +1,21 @@
+.loading {
+  position: fixed;
+  top: 40px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background-color: $green-yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba($almost-black, 0.8);
+  transform: translateY(-150px);
+  transition: 0.5s;
+
+  i {
+    font-size: 80%;
+  }
+
+  &.show {
+    transform: translateY(0);
+  }
+}

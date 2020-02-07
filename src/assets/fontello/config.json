@@ -41,6 +41,18 @@
       "css": "spin5",
       "code": 59448,
       "src": "fontelico"
+    },
+    {
+      "uid": "e44601720c64e6bb6a2d5cba6b0c588c",
+      "css": "volume-off",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "76857a03fbaa6857fe063b6c25aa98ed",
+      "css": "volume-up",
+      "code": 59398,
+      "src": "fontawesome"
     }
   ]
 }

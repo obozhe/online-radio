@@ -5,6 +5,8 @@
   height: 100vh;
   transition: 0.5s;
   transform: translateX(250px);
+  font-family: 'Bree Serif', serif;
+  z-index: 999;
 
   .stations {
     background-color: $orange;
@@ -51,13 +53,14 @@
       }
 
       input {
-        color: $almost-black;
+        font-family: 'Bree Serif', serif;
+        color: #4b4a4a;
         outline: none;
         border: none;
         padding: 0;
         margin: 0;
         width: 100%;
-        font-size: 60%;
+        font-size: 80%;
         background-color: transparent;
       }
     }

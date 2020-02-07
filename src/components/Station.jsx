@@ -4,10 +4,11 @@ const Station = ({
   name, logo, onPlay, onStop, isPlaying, isLoading, thisIsCurrent,
 }) => {
   const tooglePlaying = () => (thisIsCurrent && isPlaying ? onStop() : onPlay(name));
+  const path = './logos/';
   return (
     <div className="station">
       <div className="station-info">
-        <img src={logo} alt="" className="logo" />
+        <img src={path + logo} alt="" className="logo" />
         <div className="title">{name}</div>
       </div>
       {thisIsCurrent && isPlaying && (

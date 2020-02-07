@@ -1,7 +1,7 @@
 import React from 'react';
 
-const musicBars = () => (
-  <div className="music-bars">
+const musicBars = ({ isPlaying }) => (
+  <div className="music-bars" style={{ display: isPlaying ? 'flex' : 'none' }}>
     {Array(Math.round(window.innerWidth / 210))
       .fill(0)
       .map(() => (
