@@ -2,8 +2,6 @@
 
 _Created with react.js and Howler.js_
 
-Run live demo [here](https://drednes.github.io/demo/onlineradio)
-
 # Installation instruction
 
 1. Install.
